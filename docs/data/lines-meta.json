@@ -1,0 +1,30 @@
+{
+  "generatedAt": "2026-09-02T07:28:00.958Z",
+  "maxSeparate": 4,
+  "pitchRatio": 0.5,
+  "palette": 66,
+  "rowSlots": 10,
+  "colors": {
+    "1": "#f57145",
+    "2": "#e16cd6",
+    "3": "#4d4aba",
+    "4": "#8e4604",
+    "5": "#1cab97",
+    "6": "#7b3aa8",
+    "7": "#05617d",
+    "8": "#05617d",
+    "9": "#999f01",
+    "11": "#b0045c",
+    "15": "#126804",
+    "49": "#119efc"
+  },
+  "stats": {
+    "chains": 123,
+    "bundles": 104,
+    "strands": 1490,
+    "corridors": 19,
+    "rows": 421,
+    "kmColoured": 128,
+    "kmGrey": 4
+  }
+}

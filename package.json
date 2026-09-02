@@ -1,0 +1,16 @@
+{
+  "name": "volos-bus-map",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "description": "Interactive map of Volos public transport (12 bus lines of Αστικό ΚΤΕΛ Βόλου) — GTFS synthesised from the citybus.gr passenger API + OSM + HMM map matching",
+  "scripts": {
+    "download": "bash pipeline/download.sh",
+    "feed": "node pipeline/citybus-feed.mjs",
+    "build": "node --max-old-space-size=4096 pipeline/build.mjs --all",
+    "lines": "node --max-old-space-size=4096 pipeline/lines.mjs",
+    "report": "node pipeline/report-gaps.mjs",
+    "audit": "node --max-old-space-size=4096 pipeline/audit.mjs",
+    "serve": "node pipeline/serve.mjs 8178"
+  }
+}
