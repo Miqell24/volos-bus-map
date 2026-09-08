@@ -1929,3 +1929,7 @@ writeFileSync(join(outDir, 'meta.json'), JSON.stringify({
 log(`Wrote data/out/{route,streets,labels,street-names,stops,badges,gtfs-shape}.geojson + meta.json`);
 if (dirMarkersStripped) log(`Greek names: ${dirMarkersStripped} direction markers (ΠΡΟΣ ΚΕΝΤΡΟ / Μ / Ε) stripped off stop names and headsigns`);
 if (accentRepairs) log(`Greek names: ${accentRepairs} accents restored on words the source wrote in lowercase without one`);
+
+// Line order and night lines (user rule 8.09.2026): colours together, trolleybuses first,
+// night lines black and last — a post-pass over the written outputs, see night.mjs.
+await (await import('./night.mjs')).nightPass(outDir, /^$/, { sort: true });
